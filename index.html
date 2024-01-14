@@ -3,9 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start page</title>
+    <title>Главная страница</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 0.5em;
+        }
+
+        nav li {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 1em;
+            padding: 0.5em 4em;
+            border-radius: 5px;
+            background-color: #2c3e50;
+            display: block;
+            cursor: pointer; /* Добавлено для указания на возможность клика */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 130%;
+            left: 0;
+            display: none;
+            background-color: #2c3e50;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 0.5em 1em;
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav ul li:hover > a {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        li{ list-style-type: none;}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Добавляем обработчики событий для каждой кнопки
+            var buttons = document.querySelectorAll('nav a');
+            
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var ul = this.nextElementSibling; // Получаем следующий элемент (ul)
+                    ul.style.display = (ul.style.display === 'block') ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>Test</h1>
+    <header>
+        <h1>Добро пожаловать на наш сайт!</h1>
+    </header>
+
+    <section>
+        <h2>О нас</h2>
+        <p>Добро пожаловать на наш стильный и уютный сайт. Мы предоставляем различные услуги...</p>
+    </section>
+
+     <nav>
+        <li>
+            <a href="#">1</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+       
+        <li>
+            <a href="#">2</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">3</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">4</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">5</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">6</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">7</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">8</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">9</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">10</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">11</a>
+            <ul>
+                <li><a href="#">Подссылка 1</a></li>
+                <li><a href="#">Подссылка 2</a></li>
+                <li><a href="#">Подссылка 3</a></li>
+            </ul>
+        </li>
+    </nav>
+
+    <footer>
+        <p>&copy; 2024 Ваше Имя</p>
+    </footer>
 </body>
 </html>
