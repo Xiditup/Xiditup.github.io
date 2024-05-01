@@ -1,0 +1,282 @@
+@charset "UTF-8";
+header {
+  background-image: url("First background image.png");
+  /* Растягиваем изображение на всю ширину и высоту div */
+  background-size: cover;
+  /* Закрепляем изображение на заднем плане */
+  background-attachment: fixed;
+  /* Центрируем изображение по горизонтали и вертикали */
+  background-position: center;
+}
+
+.zatemnenie1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 10vh;
+  padding: 0% 10% 0% 10%;
+  position: relative;
+}
+
+.desktop-btn {
+  display: block;
+  /* По умолчанию кнопки видны */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  /* если нужно */
+  color: white;
+}
+
+.desktop-btn2 {
+  border: 3px solid red;
+  display: block;
+  /* По умолчанию кнопки видны */
+  background-color: transparent;
+  padding: 7px;
+  margin: 0;
+  cursor: pointer;
+  /* если нужно */
+  color: white;
+}
+
+.menu-items {
+  display: none;
+  /* По умолчанию бургер меню скрыто */
+  position: absolute;
+  top: 78%;
+  right: 0;
+  width: 35%;
+  height: 58vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.menu-items li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  /* Размер шрифта */
+  display: block;
+  padding: 10px 0;
+  /* Отступы для пунктов */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu-items.show {
+  display: block;
+  /* Показываем бургер меню */
+}
+
+.menu-items li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.menu-items li:hover {
+  border: 5px solid red;
+  /* Обводка при наведении */
+}
+
+.burger-btn {
+  display: none;
+  /* По умолчанию бургер кнопка скрыта */
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 4px;
+  border: 4px solid red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-btn {
+    display: none;
+    /* Скрываем кнопки на мобильных устройствах */
+  }
+  .burger-btn {
+    display: block;
+    /* Показываем бургер кнопку на мобильных устройствах */
+  }
+}
+.BackgroundPhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Выравнивание по горизонтали */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Выравнивание по вертикали */
+  /* Указываем ссылку на изображение */
+  background-image: url("First background image.png");
+  /* Растягиваем изображение на всю ширину и высоту div */
+  background-size: cover;
+  /* Закрепляем изображение на заднем плане */
+  background-attachment: fixed;
+  /* Центрируем изображение по горизонтали и вертикали */
+  background-position: center;
+  min-height: 60vh;
+  /* Например, устанавливаем высоту контейнера */
+}
+.BackgroundPhoto img {
+  max-width: 100%;
+  /* Чтобы изображение не выходило за пределы контейнера */
+  max-height: 100%;
+  /* То же самое */
+}
+
+.grid-container-uslugi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 20px;
+}
+
+.grid-item-uslugi {
+  -ms-flex-preferred-size: calc(10% - 20px);
+      flex-basis: calc(10% - 20px); /* 33.33% for three items in a row, subtracting gap */
+  text-align: center;
+}
+
+.grid-item-uslugi img {
+  width: auto;
+  max-width: 100%; /* Ensure images don't exceed their container */
+  height: auto;
+}
+
+.grid-item-uslugi p {
+  margin-top: 10px;
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-item {
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px); /* 50% for two items in a row, subtracting gap */
+  }
+  .grid-item-uslugi p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid-container-uslugi {
+    -ms-flex-preferred-size: calc(100% - 20px);
+        flex-basis: calc(100% - 20px); /* Full width for one item per row, subtracting gap */
+  }
+}
+.uslugi {
+  background-image: url("фон финал.png");
+  /* Растягиваем изображение на всю ширину и высоту div */
+  background-size: cover;
+  /* Закрепляем изображение на заднем плане */
+  background-attachment: fixed;
+  /* Центрируем изображение по горизонтали и вертикали */
+  background-position: center;
+  min-height: 75vw;
+}
+.uslugi .nazvanie {
+  color: white;
+  text-align: center;
+  font-size: 3.5vh;
+}
+
+.grid-container-comp-pred {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 5%;
+}
+.grid-container-comp-pred .grid-item-comp-pred {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.grid-container-comp-pred .grid-item-comp-pred img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+.grid-container-comp-pred .grid-item-comp-pred p {
+  margin-left: 10px;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .grid-container-comp-pred .grid-item-comp-pred {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+}
+
+.but1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.but1 .contact {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 4px;
+  border: 4px solid red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+}
+
+footer {
+  background-image: url("First background image.png");
+  /* Растягиваем изображение на всю ширину и высоту div */
+  background-size: cover;
+  /* Закрепляем изображение на заднем плане */
+  background-attachment: fixed;
+  /* Центрируем изображение по горизонтали и вертикали */
+  background-position: center;
+  min-height: 10vh;
+  color: white;
+}
+footer .zatemnenie {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 10vh;
+}
+footer .zatemnenie img {
+  padding: 1% 0 0 1%;
+  max-width: 10%;
+  max-height: 10%;
+}

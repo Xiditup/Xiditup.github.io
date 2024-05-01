@@ -1,0 +1,396 @@
+.BackgroundPhoto {
+    display: flex;
+    justify-content: center;
+    /* Выравнивание по горизонтали */
+    align-items: center;
+    /* Выравнивание по вертикали */
+    /* Указываем ссылку на изображение */
+    background-image: url('First background image.png');
+
+    /* Растягиваем изображение на всю ширину и высоту div */
+    background-size: cover;
+
+    /* Закрепляем изображение на заднем плане */
+    background-attachment: fixed;
+
+    /* Центрируем изображение по горизонтали и вертикали */
+    background-position: center;
+    min-height: 60vh;
+
+    /* Например, устанавливаем высоту контейнера */
+    img {
+        max-width: 100%;
+        /* Чтобы изображение не выходило за пределы контейнера */
+        max-height: 100%;
+        /* То же самое */
+
+    }
+}
+
+header {
+    background-image: url('First background image.png');
+    /* Растягиваем изображение на всю ширину и высоту div */
+    background-size: cover;
+    /* Закрепляем изображение на заднем плане */
+    background-attachment: fixed;
+    /* Центрируем изображение по горизонтали и вертикали */
+    background-position: center;
+}
+
+.zatemnenie1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 10vh;
+    padding: 0% 10% 0% 10%;
+    position: relative;
+}
+
+.desktop-btn {
+    display: block;
+    /* По умолчанию кнопки видны */
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    /* если нужно */
+    color: white;
+
+
+
+}
+
+.desktop-btn2 {
+    border: 3px solid red;
+    display: block;
+    /* По умолчанию кнопки видны */
+    background-color: transparent;
+
+    padding: 7px;
+    margin: 0;
+    cursor: pointer;
+    /* если нужно */
+    color: white;
+}
+
+.menu-items {
+    display: none;
+    /* По умолчанию бургер меню скрыто */
+    position: absolute;
+    top: 78%;
+    right: 0;
+    width: 35%;
+    height: 58vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+    list-style-type: none;
+
+}
+
+.menu-items li a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    /* Размер шрифта */
+    display: block;
+    padding: 10px 0;
+    /* Отступы для пунктов */
+    box-sizing: border-box;
+}
+
+.menu-items.show {
+    display: block;
+    /* Показываем бургер меню */
+}
+
+.menu-items li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.menu-items li:hover {
+    border: 5px solid red;
+    /* Обводка при наведении */
+}
+
+.burger-btn {
+    display: none;
+    /* По умолчанию бургер кнопка скрыта */
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 4px;
+    border: 4px solid red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-btn {
+        display: none;
+        /* Скрываем кнопки на мобильных устройствах */
+    }
+
+    .burger-btn {
+        display: block;
+        /* Показываем бургер кнопку на мобильных устройствах */
+    }
+}
+
+.InfPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Выравнивание по центру, если нужно */
+    padding: 10px;
+    /* Пространство вокруг кнопок */
+    background-color: black;
+    min-height: 30vh;
+    /* Минимальная высота контейнера, чтобы карточки не сжимались слишком сильно */
+    flex-wrap: wrap;
+
+    img {
+
+        max-width: 100%;
+        /* Чтобы изображение не выходило за пределы контейнера */
+        max-height: 100%;
+        /* То же самое */
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .InfPanel {
+        min-height: auto;
+        /* Убираем минимальную высоту контейнера */
+        justify-content: flex-start;
+        /* Выравнивание карточек по левому краю */
+        padding: 5px;
+        /* Уменьшаем отступы */
+
+
+        img {
+            width: 50%;
+            /* Занимаем всю ширину контейнера */
+            height: auto;
+            /* Автоматическая высота */
+            margin: 5px 0;
+            /* Уменьшаем отступы между карточками */
+        }
+    }
+}
+
+.Osnova {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3vw;
+    background-image: url('фон.png');
+
+    /* Растягиваем изображение на всю ширину и высоту div */
+    background-size: cover;
+
+    /* Закрепляем изображение на заднем плане */
+    background-attachment: fixed;
+
+    /* Центрируем изображение по горизонтали и вертикали */
+    background-position: center;
+}
+
+
+.drugieRem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Выравнивание по центру, если нужно */
+
+    /* Пространство вокруг кнопок */
+    background-color: black;
+    min-height: 30vh;
+    /* Минимальная высота контейнера, чтобы карточки не сжимались слишком сильно */
+    flex-wrap: wrap;
+
+    img {
+        min-width: 100%;
+        /* Чтобы изображение не выходило за пределы контейнера */
+        max-height: 100%;
+        /* То же самое */
+    }
+}
+
+.OKompanii {
+    display: grid;
+    /* Используем грид */
+    grid-template-columns: auto 1fr;
+    /* Первый столбец для изображения, второй для текста */
+    align-items: center;
+    /* Выравниваем элементы по вертикали */
+    border: 1px solid #000;
+    /* Рамка */
+    padding: 10px;
+    /* Отступы внутри контейнера */
+    width: fit-content;
+    /* Ширина контейнера подстраивается под содержимое */
+
+    min-height: 60vh;
+    /* Минимальная высота контейнера, чтобы карточки не сжимались слишком сильно */
+    flex-wrap: wrap;
+    /* Указываем ссылку на изображение */
+    background-image: url('First background image.png');
+
+    /* Растягиваем изображение на всю ширину и высоту div */
+    background-size: cover;
+
+    /* Закрепляем изображение на заднем плане */
+    background-attachment: fixed;
+
+    /* Центрируем изображение по горизонтали и вертикали */
+    background-position: center;
+
+    .text {
+        margin-left: 5%;
+        padding: 1%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #f0f0f0;
+        border: 4px solid red;
+        /* Красная рамка */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .OKompanii {
+        grid-template-columns: 1fr;
+        /* Только один столбец для мобильных устройств */
+        justify-items: center;
+
+        .text {
+            margin-top: 5%;
+        }
+    }
+}
+
+footer {
+    background-image: url('First background image.png');
+
+    /* Растягиваем изображение на всю ширину и высоту div */
+    background-size: cover;
+
+    /* Закрепляем изображение на заднем плане */
+    background-attachment: fixed;
+
+    /* Центрируем изображение по горизонтали и вертикали */
+    background-position: center;
+    /*min-height: 10vh;*/
+    color: white;
+
+    .zatemnenie {
+        background-color: rgba(0, 0, 0, 0.7);
+       
+img{
+    padding: 1% 0 0 1%;
+    max-width: 10%;
+    max-height: 10%;
+}
+
+
+
+
+    }
+}
+
+
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+
+
+}
+
+
+
+.container {
+    width: 90%;
+
+    margin: 0 auto;
+    /* центрируем контейнер на странице */
+    /* Пространство вокруг кнопок */
+    background-image: url('фон.png');
+    /* Растягиваем изображение на всю ширину и высоту div */
+    background-size: cover;
+    /* Закрепляем изображение на заднем плане */
+    background-attachment: fixed;
+    /* Центрируем изображение по горизонтали и вертикали */
+    background-position: center;
+    position: relative;
+    padding: 0% 5% 2% 5%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* автоматически распределяем колонки, минимальная ширина 200px */
+    gap: 40px;
+    /* расстояние между изображениями */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* скрываем часть изображения, выходящую за границы */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 8px 16px;
+    /* Отступы кнопок */
+    background-color: rgba(0, 0, 0, 0.6);
+
+    /* Цвет кнопок, для наглядности */
+    color: white;
+    /* Цвет текста */
+
+    /* Убираем границы */
+    border-radius: 4px;
+    /* Скругление углов */
+    border: 4px solid red;
+}
+
+.image-container:hover .button {
+    display: block;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* затемнение с 50% прозрачностью */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover::before {
+    opacity: 1;
+}
+a{color: white;}

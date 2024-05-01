@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="uslugi.css">
+</head>
+
+<body>
+    <header>
+        <div class="zatemnenie1">
+            <!-- Обычные кнопки для десктопа -->
+            <button class="desktop-btn">Ослеживание <br> ремонта</button>
+            <button class="desktop-btn">Услуги</button>
+            <button class="desktop-btn">О комании</button>
+            <button class="desktop-btn">Контакты</button>
+            <button class="desktop-btn2">Заказать звонок</button>
+            <!-- Бургер кнопка для мобильных -->
+            <button class="burger-btn">☰</button>
+            <!-- Список элементов меню -->
+            <ul class="menu-items">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+            </ul>
+        </div>
+
+        <script>
+            // script.js
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const burgerBtn = document.querySelector('.burger-btn');
+                const menuItems = document.querySelector('.menu-items');
+
+                burgerBtn.addEventListener('click', function () {
+                    menuItems.classList.toggle('show');
+                });
+
+                // Закрываем меню при клике вне его области
+                document.addEventListener('click', function (event) {
+                    if (!menuItems.contains(event.target) && !burgerBtn.contains(event.target)) {
+                        menuItems.classList.remove('show');
+                    }
+                });
+            });
+        </script>
+    </header>
+    <div class="BackgroundPhoto">
+        <img src="Лого.png" alt="">
+
+    </div>
+    <div class="uslugi">
+        <p>uslugi</p>
+        <div class="grid-container-uslugi">
+            <div class="grid-item-uslugi">
+                <img src="comp1 1.png" alt="Image 1" class="comp1">
+                <p>Персональные компьютерные системы (компьютеры, Commercial и Consumer ноутбуки и профессиональные рабочие станции).</p>
+            </div>
+            <div class="grid-item-uslugi">
+                <img src="lazer 1.png" alt="Image 2">
+                <p>Системы печати и обработки изображения (LaserJet принтеры, включая черно-белые и цветные LaserJet принтеры, многофункциональные устройства).2</p>
+            </div>
+            <div class="grid-item-uslugi">
+                <img src="enny 2.png" alt="Image 3">
+                <p>Системы печати и обработки изображения (струйные принтеры, струйные многофункциональные устройства, сканеры и принтеры Photosmart).</p>
+            </div>
+            <div class="grid-item-uslugi">
+                <img src="design 1.png" alt="Image 3">
+                <p>Принтер с возможностью печатать на листах «широких» форматов, таких как А1, А2 и А3.</p>
+            </div>
+        </div>
+        <p class="nazvanie">Компания также предлагает</p>
+        <div class="grid-container-comp-pred">
+            <div class="grid-item-comp-pred">
+                <img src="Человечек.png" alt="Image 1">
+                <p>БЕСПЛАТНУЮ ДИАГНОСТИКУ!<br><br>
+                    Поможем с выявлением неисправности бесплатно!</p>
+            </div>
+            <div class="grid-item-comp-pred">
+                <img src="Ноут 1.png" alt="Image 2">
+                <p>ВЫЕЗД СПЕЦИАЛИСТА!<br><br>ООО "БелХард Сервис" предлагает платную услугу по выезду инженера к Заказчику (действует в пределах Минска). Инженеры нашей компании готовы выехать на Ваш объект для консультации и решения задач в области ремонта техники HP. Предложение действительно для юридических лиц.</p>
+            </div>
+        </div>
+        <div class="but1"><button class="contact">Задать вопрос</button></div>
+        
+    </div>
+    <footer>
+        <div class="zatemnenie">
+            
+          <img src="Лого.png" alt="">
+          
+        </div>
+
+    </footer>
+</body>
+
+</html>

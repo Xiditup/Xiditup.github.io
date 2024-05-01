@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <header>
+        <div class="zatemnenie1">
+            <!-- Обычные кнопки для десктопа -->
+            <button class="desktop-btn"><a href="uslugi.html">Ослеживание <br> ремонта</a></button>
+            <button class="desktop-btn">Услуги</button>
+            <button class="desktop-btn">О комании</button>
+            <button class="desktop-btn">Контакты</button>
+            <button class="desktop-btn2">Заказать звонок</button>
+            <!-- Бургер кнопка для мобильных -->
+            <button class="burger-btn">☰</button>
+            <!-- Список элементов меню -->
+            <ul class="menu-items">
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О комании</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <script>
+            // script.js
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const burgerBtn = document.querySelector('.burger-btn');
+                const menuItems = document.querySelector('.menu-items');
+
+                burgerBtn.addEventListener('click', function () {
+                    menuItems.classList.toggle('show');
+                });
+
+                // Закрываем меню при клике вне его области
+                document.addEventListener('click', function (event) {
+                    if (!menuItems.contains(event.target) && !burgerBtn.contains(event.target)) {
+                        menuItems.classList.remove('show');
+                    }
+                });
+            });
+        </script>
+    </header>
+
+    <div class="BackgroundPhoto">
+        <img src="Лого.png" alt="">
+
+    </div>
+    <div class="InfPanel">
+        <img src="карточка.png" alt="Нал и безнал расчет">
+        <img src="карточка1.png" alt="Нал и безнал расчет">
+        <img src="карточка2.png" alt="Нал и безнал расчет">
+        <img src="карточка3.png" alt="Нал и безнал расчет">
+    </div>
+    <div class="Osnova">
+        <p>Ремонт ноутбуков, принтеров, плоттеров и другой техники</p>
+    </div>
+    <div class="container">
+        <div class="grid-container">
+            <div class="image-container">
+                <img src="Ремонт ноутбуков.png" alt="Image 1" class="image" />
+                <button class="button">Кнопка 1</button>
+            </div>
+            <div class="image-container">
+                <img src="Ремонт плоттеров.png" alt="Image 2" class="image" />
+                <button class="button">Кнопка 2</button>
+            </div>
+            <div class="image-container">
+                <img src="Ремонт принтеров.png" alt="Image 3" class="image" />
+                <button class="button">Кнопка 3</button>
+            </div>
+        </div>
+    </div>
+    <div class="OKompanii">
+        <img src="Мужик.png" alt="">
+        <div class="text">Компания, созданная в 1995 году для сервисного обслуживания и ремонта оборудования компании
+            Hewlett-Packard (HP). После разделения компании Hewlett-Packard (HP) в 2015 году на две независимые компании
+            HP Inc. (персональные системы и технологии печати, ноутбуки, ПК, планшеты, принтеры, сканеры, плоттеры) и
+            Hewlett-Packard Enterprise (серверы, системы хранения, сетевая инфраструктура ) БелХард Сервис производит
+            ремонт и обслуживание оборудования HP Inc. Список поддерживаемого оборудования можно посмотреть здесь. Вы
+            можете позвонить нам или отправить запрос по электронной почте.
+            <p>Историческая справка: Программа HP ASP была разработана HP в 1995 году для более полного обеспечения
+                соответствующего уровня сервиса в условиях гигантских просторов стран бывшего СССР. До создания первых
+                ASP (а ими были сервисные центры компаний R-Style™ и БелХард), сервисное обслуживание своего
+                оборудования компания Hewlett-Packard осуществляла в собственном сервисном центре в Москве. Программа HP
+                ASP предоставляла авторизованным сервис-партнерам определенные права и обязанности по обслуживанию
+                некоторого спектра оборудования производства компании Hewlett-Packard.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="zatemnenie">
+            
+          <img src="Лого.png" alt="">
+          
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
