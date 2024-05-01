@@ -268,15 +268,17 @@ footer {
   background-attachment: fixed;
   /* Центрируем изображение по горизонтали и вертикали */
   background-position: center;
-  min-height: 10vh;
   color: white;
 }
 footer .zatemnenie {
   background-color: rgba(0, 0, 0, 0.7);
-  min-height: 10vh;
 }
 footer .zatemnenie img {
   padding: 1% 0 0 1%;
   max-width: 10%;
   max-height: 10%;
+}
+
+a {
+  color: white;
 }
