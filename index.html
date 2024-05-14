@@ -5,14 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="CSS/Index.css">
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    #scrollBtn {
+            display: none;
+            position: fixed;
+            bottom: 0.1%;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 0.1% 1%;
+            border-radius: 5px;
 
-</style>
+    }
+    </style>
 
 <body>
+<script>
+    // Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Smooth scrolling
+    });
+}
 
+// Show the button when scrolling down
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollBtn").style.display = "none";
+    }
+}
+</script>
     <header>
         <div class="zatemnenie1">
             <!-- Обычные кнопки для десктопа -->
@@ -52,14 +87,14 @@
     </header>
 
     <div class="BackgroundPhoto">
-        <img src="Лого.png" alt="">
+        <img src="Media/Лого.png" alt="">
 
     </div>
     <div class="InfPanel">
-        <img src="карточка.png" alt="Нал и безнал расчет">
-        <img src="карточка1.png" alt="Нал и безнал расчет">
-        <img src="карточка2.png" alt="Нал и безнал расчет">
-        <img src="карточка3.png" alt="Нал и безнал расчет">
+        <img src="Media/карточка.png" alt="Нал и безнал расчет">
+        <img src="Media/карточка1.png" alt="Нал и безнал расчет">
+        <img src="Media/карточка2.png" alt="Нал и безнал расчет">
+        <img src="Media/карточка3.png" alt="Нал и безнал расчет">
     </div>
     <div class="Osnova">
         <p>Ремонт ноутбуков, принтеров, плоттеров и другой техники</p>
@@ -67,21 +102,21 @@
     <div class="container">
         <div class="grid-container">
             <div class="image-container">
-                <img src="Ремонт ноутбуков.png" alt="Image 1" class="image" />
+                <img src="Media/Ремонт ноутбуков.png" alt="Image 1" class="image" />
                 <button class="button"><a href="uslugi.html">Ремонт ноутбуков</a></button>
             </div>
             <div class="image-container">
-                <img src="Ремонт плоттеров.png" alt="Image 2" class="image" />
+                <img src="Media/Ремонт плоттеров.png" alt="Image 2" class="image" />
                 <button class="button"><a href="uslugi.html">Ремонт принтеров</a></button>
             </div>
             <div class="image-container">
-                <img src="Ремонт принтеров.png" alt="Image 3" class="image" />
+                <img src="Media/Ремонт принтеров.png" alt="Image 3" class="image" />
                 <button class="button"><a href="uslugi.html">Ремонт плоттеров</a></button>
             </div>
         </div>
     </div>
     <div class="OKompanii">
-        <img src="Мужик.png" alt="">
+        <img src="Media/Мужик.png" alt="">
         <div class="text">Компания, созданная в 1995 году для сервисного обслуживания и ремонта оборудования компании
             Hewlett-Packard (HP). После разделения компании Hewlett-Packard (HP) в 2015 году на две независимые компании
             HP Inc. (персональные системы и технологии печати, ноутбуки, ПК, планшеты, принтеры, сканеры, плоттеры) и
@@ -96,10 +131,11 @@
                 некоторого спектра оборудования производства компании Hewlett-Packard.</p>
         </div>
     </div>
+    <button id="scrollBtn" onclick="scrollToTop()">В начало</button>
     <footer>
         <div class="zatemnenie">
             
-          <img src="Лого.png" alt="">
+          <img src="Media/Лого.png" alt="">
           
         </div>
 
